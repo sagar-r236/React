@@ -1,0 +1,62 @@
+Difference between React and ReactDom
+
+React is the core library which is used by React, React Native, React 3d etc.. 
+whereas ReactDom gives access to DOM of the browser.
+
+
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------
+Writing hello world in React
+----------------------------------------
+
+<body>
+
+    <div id='root'></div>
+
+</body>
+
+
+<script>
+    /*
+    
+    Just like JS first we have to create element for which we use React api called React.createElement()
+    which takes three arguemnt 
+    1st arguemnt : the type of element which you have to create
+    2nd arguemnt : an object which is also called props where we pass in attributes and the value for the element
+    3rd arguemnt : what should be inside the adpp
+    
+    */
+    
+    const heading = React.createElement('h1', {
+        id : "title",
+    }, "Hello World!");
+
+    /*
+    Next is we have to create root, Root is the place where we gonna inject the react code using the render method
+    if we do anything related to DOM manipulation we do it using ReactDom.
+    
+    */
+
+    const root = ReactDom.createRoot(document.getElementById('root'))
+
+    //next we render to inject the react code which is basically heading in this case
+    root.render(heading);//that's it!, our hello world is ready
+
+</script>
+
+
+Inside the root developers usually place a place holder called "not rendered", which is a way to know that it is
+not rendered knowing there may be some errors with React.
+
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+
