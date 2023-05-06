@@ -1,0 +1,53 @@
+The hello React app which was developed in week 1 is not production ready, in order to make it production ready:
+
+1. we have to minify our app
+2. remove all the console log
+
+In order to do it we use bundlers, some of the bundlers are weppack, vite, parcel etc. We use parcel!.
+
+Best thing about React is that they don't enforce you to do in a certain way, you can install some 3rd party packages and use it.
+
+Bundler : Development tool that combines many js file into a single one that is production ready.
+
+What is parcel?
+
+Parcel is a package (module) if we want to install package we need package manager we use npm for managing packages.
+
+Package manager:
+
+if we want to install 3rd party package we use package manager we use npm.
+
+in order to initialize the package manager we type the command:
+npm init -y
+once we initialize npm we get package.json which contains the configuration of the app.
+
+to install any packages we use the command:
+npm install <package name>
+
+npm install -D or --save-dev <package name> //for dev dependencies
+
+Note : ^ is for minor upadates as well as for patches
+       ~ is for only patches
+
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+
+After you install any package, you'll get package-lock.json file which contains the exact version of the packages that our project is using.
+
+Installing react and react-dom
+
+the command used to install react and ReactDom:
+npm install react react-dom or npm i react react-dom
+
+Note : nvm stands for node version manager used to change the version 
+
+once you installed react and react-dom import to app.js and try to run using parcel
+
+npx stands for npm package executable : we use it to execte npm packages in this case since we are using parcel we use command:
+
+npx parcel <entry-point>
+
+eg: npx parcel index.html
+
