@@ -9,9 +9,9 @@ const heading = React.createElement(
     id: "header",
     className: "head",
   },
-  "Hello World!"
+  "Hello World! from parcel"
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+console.log('check')
 root.render(heading);
