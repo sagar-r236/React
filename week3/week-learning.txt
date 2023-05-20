@@ -82,3 +82,130 @@ to write the what is query go to a website broserlist.dev and see the query comp
 eg : "broserlist": [
     "last 2 version"
   ]
+
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+
+Laying the foundation
+
+
+Polyfill : a polyfill is a code which is a replacement for newer version of the code.
+
+who does polyfill : babel
+
+
+Tree shaking : Lets say you have a package and import it, while you're importing all the functionalities of the package will come to your
+code, but you may be using only few functions therefore parcel imprt only functions which your are using and this is tree shaking.
+basically removing unused code.
+
+In the package.json file we have something "scripts" object where we can write alias for our command.
+
+let say when are executing parcel we use to do something like npx parcel <entry_point>, so in order to shorten this in the scripts what 
+we can do is 
+
+scripts : {
+  "start" : "parcel index.html"
+}
+
+and while executing we can type command like npm run start
+
+so npx == npm run
+
+----------------------------------------------------------------------------------------------------------------------
+
+Removing console log
+
+In order to remove console log we have to install babel-plugin-transform-remove-console so this will remove all the 
+console.log in your project.
+
+----------------------------------------------------------------------------------------------------------------------
+
+Suppose we have a div created using react and we have two childs inside it, for each child we have to give a prop, with 
+key as attribute and give some value to it.
+
+reason why we should give it:
+for efficiency, so react tracks of the element while re-rendering.
+
+eg: 
+const heading = React.createElement(
+  "h1",
+  {
+    id: "header",
+    className: "head",
+    key : "2015"
+  },
+  "Hello World! from parcel"
+);
+
+const heading2 = React.createElement(
+  "h2",
+  {
+    className: "head",
+    key: "2014"
+  },
+  "heading 2"
+)
+
+
+const container = React.createElement(
+  "div",
+  {
+    id : "container"  
+  }, 
+  [heading, heading2]
+)
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+How React.createElement works
+
+when you code React.createElement it creates an object, then the object is converted to html code and put up on the DOM.
+
+if we use React.createElement maintainance of code become hectic, so the JSX comes in,
+
+JSX - jsx is a html like syntax in js, but it is not html in js 
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+Component
+
+In react we have two types of components:
+1. Functional components
+2. class components
+
+Functional component : a functional component is nothing but a function which returns a piece of jsx or react element.
+
+Always remember name of functional component starts with capital letter.
+
+eg:
+
+const HeaderComponent = () => {
+  <h1>This is a header component</h1>
+}
+
+and if you want to render HeaderComponent you have to render using a syntax like this < HeaderComponent />
+
+----------------------------------------------------------------------------------------------------------------------
+
+How to use react element inside the react component, you just have to put your element inside the curly braces of the react component
+
+eg : 
+
+//React element
+
+const paragraphToPutInsideComponnet = React.createElement(
+  "h1",
+  {},
+  "This is a paragraph"
+);
+
+const ReactComponent = () => {
+  (
+    <h1>This is some paragraph</h1>
+    <div>{paragraphToPutInsideComponnet}</div>
+  );
+}

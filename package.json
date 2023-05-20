@@ -2,9 +2,9 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "react course",
- 
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel week1/week1-index.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/sagar-r236/React#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.8.3",
     "process": "^0.11.10"
   },
