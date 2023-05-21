@@ -34,7 +34,15 @@ const container = React.createElement(
 )
 
 const HeaderComponent = () => {
-  return <h1>Hello from header component</h1>
+  return (
+    <div>
+      <h1>Hello from header component</h1>
+      { heading3 }
+    </div>
+    
+ 
+  
+  )
 }
 
 

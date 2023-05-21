@@ -193,6 +193,8 @@ and if you want to render HeaderComponent you have to render using a syntax like
 
 How to use react element inside the react component, you just have to put your element inside the curly braces of the react component
 
+Note : we can write any piece of JS inside this curly.
+
 eg : 
 
 //React element
