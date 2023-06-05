@@ -4,7 +4,7 @@ body {
 
 .header {
     display: flex;
-    border: 1px solid black;
+    border : 1px solid black;
     justify-content: space-between;
     align-items: center;
     
@@ -15,6 +15,7 @@ body {
     display: flex;
     list-style-type: none;
     align-self: center;
+    padding: 10px;
 
 }
 
@@ -28,4 +29,24 @@ body {
    max-width: 100%;
    max-height: 100%;
    padding: 5px;
+}
+
+
+.card-container {
+    display: flex;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 15%;
+    border: 1px solid black;
+    /* padding: 10px; */
+    margin: 10px;
+    padding: 5px;
+    
+}
+
+.card > img {
+    width: 100%;
 }

@@ -59,9 +59,29 @@ const Component = () => {
   )
 }
 
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 
+Config driven UI 
 
+We can't make different UI for different cities, so backend takes care of all those things this is known as config driven UI.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Passing in props:
+
+passing in props means passing some data to the function.
+
+eg: const ExampleComponent = (props) => {
+  props.name;
+}
+
+const SomeComponent = () => {
+  return (
+    <ExampleComponent data=hello /> {// here you have passed a prop} 
+  )
+}
 
 
 
