@@ -83,9 +83,13 @@ const SomeComponent = () => {
   )
 }
 
+object restructuring :
 
+object restructuring is way of directly getting the values of a property from an object.
 
-
+eg: let's say you have object, a = {name:'sagar', class:'mca'}
+    {name, class} = a //object destructuring.
+    console.log(name) //output: sagar destructuring happened.
 
 
 
